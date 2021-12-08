@@ -114,7 +114,6 @@ class _HomePageState extends State<HomePage> {
                 child: FocusableDash(
                   key: const ValueKey<int>(1),
                   color: Colors.red,
-                  autoFocus: true,
                   onMoveAction: _move,
                   onBumpAction: _bump,
                 ),
