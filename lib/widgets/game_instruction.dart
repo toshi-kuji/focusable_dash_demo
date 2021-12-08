@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class GameInstruction extends StatelessWidget {
   const GameInstruction({Key? key}) : super(key: key);
@@ -9,7 +8,7 @@ class GameInstruction extends StatelessWidget {
     return Align(
       alignment: Alignment.center,
       child: DefaultTextStyle(
-        style: GoogleFonts.hachiMaruPop(
+        style: const TextStyle(
           color: Colors.black26,
           fontSize: 30,
           fontWeight: FontWeight.bold,
