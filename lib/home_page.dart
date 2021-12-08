@@ -71,6 +71,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    FocusManager.instance.addListener(() {
+      print(FocusManager.instance.primaryFocus);
+      print(_focusNode.hasFocus);
+    });
+  }
+
+  @override
   void dispose() {
     _focusNode.dispose();
     super.dispose();
@@ -105,6 +114,7 @@ class _HomePageState extends State<HomePage> {
                 child: FocusableDash(
                   key: const ValueKey<int>(1),
                   color: Colors.red,
+                  autoFocus: true,
                   onMoveAction: _move,
                   onBumpAction: _bump,
                 ),
