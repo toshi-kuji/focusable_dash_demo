@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GameInstruction extends StatelessWidget {
   const GameInstruction({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class GameInstruction extends StatelessWidget {
     return Align(
       alignment: Alignment.center,
       child: DefaultTextStyle(
-        style: const TextStyle(
+        style: GoogleFonts.kosugiMaru(
           color: Colors.black26,
           fontSize: 30,
           fontWeight: FontWeight.bold,
