@@ -92,56 +92,54 @@ class _HomePageState extends State<HomePage> {
       shortcuts: AppIntents.gameShortcuts,
       actions: _gameActions,
       child: Scaffold(
-        body: FocusScope(
-          child: Stack(
-            children: <Widget>[
-              const GameInstruction(),
-              AnimatedAlign(
-                duration: _duration,
-                curve: _curve,
-                alignment: _alignments[0]!,
-                child: FocusableDash(
-                  key: const ValueKey<int>(0),
-                  autoFocus: true,
-                  onMoveAction: _move,
-                  onBumpAction: _bump,
-                ),
+        body: Stack(
+          children: <Widget>[
+            const GameInstruction(),
+            AnimatedAlign(
+              duration: _duration,
+              curve: _curve,
+              alignment: _alignments[0]!,
+              child: FocusableDash(
+                key: const ValueKey<int>(0),
+                autoFocus: true,
+                onMoveAction: _move,
+                onBumpAction: _bump,
               ),
-              AnimatedAlign(
-                duration: _duration,
-                curve: _curve,
-                alignment: _alignments[1]!,
-                child: FocusableDash(
-                  key: const ValueKey<int>(1),
-                  color: Colors.red,
-                  onMoveAction: _move,
-                  onBumpAction: _bump,
-                ),
+            ),
+            AnimatedAlign(
+              duration: _duration,
+              curve: _curve,
+              alignment: _alignments[1]!,
+              child: FocusableDash(
+                key: const ValueKey<int>(1),
+                color: Colors.red,
+                onMoveAction: _move,
+                onBumpAction: _bump,
               ),
-              AnimatedAlign(
-                duration: _duration,
-                curve: _curve,
-                alignment: _alignments[2]!,
-                child: FocusableDash(
-                  key: const ValueKey<int>(2),
-                  color: Colors.blue,
-                  onMoveAction: _move,
-                  onBumpAction: _bump,
-                ),
+            ),
+            AnimatedAlign(
+              duration: _duration,
+              curve: _curve,
+              alignment: _alignments[2]!,
+              child: FocusableDash(
+                key: const ValueKey<int>(2),
+                color: Colors.blue,
+                onMoveAction: _move,
+                onBumpAction: _bump,
               ),
-              AnimatedAlign(
-                duration: _duration,
-                curve: _curve,
-                alignment: _alignments[3]!,
-                child: FocusableDash(
-                  key: const ValueKey<int>(3),
-                  color: Colors.green,
-                  onMoveAction: _move,
-                  onBumpAction: _bump,
-                ),
+            ),
+            AnimatedAlign(
+              duration: _duration,
+              curve: _curve,
+              alignment: _alignments[3]!,
+              child: FocusableDash(
+                key: const ValueKey<int>(3),
+                color: Colors.green,
+                onMoveAction: _move,
+                onBumpAction: _bump,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
